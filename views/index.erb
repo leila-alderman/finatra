@@ -1,7 +1,11 @@
-<h1>Welcome to Finatra!</h1>
+<h1>All the Fish!</h1>
 
-<h2>All the Fish!</h2>
+<table class="table table-striped">
+  <% @fishes.each_with_index do |fish, i| %>
+  <tr>
+    <td><%= index +1 %></td>
+    <td><a href="/<%= fish.name %>"><%= fish.name.capitalize %></a></td>
+  </tr>
+  <% end %>
+</table>
 
-<% @fishes.each do |fish| %>
-  <p> <%= fish.name %> </p>
-<% end %>

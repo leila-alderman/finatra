@@ -9,6 +9,6 @@ end
 
 # /tuna or /goldfist
 get "/:fish_name" do
-  @fish = params[:fish_name]
+  @fish = Fish.find_by(name: params[:fish_name])
   erb :show, layout: :main
 end
