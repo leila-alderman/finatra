@@ -1,10 +1,20 @@
 require_relative "models"
 
-Fish.create!({
+Fish.destroy_all
+
+Fish.create([{
+  name: "Clownfish",
+  image_url: "http://www.leisurepro.com/blog/wp-content/uploads/2010/04/Ocellaris-Clownfish.jpg",
+  description: "This fish isn't very funny."
+},
+{ 
   name: "Goldfish",
+  image_url: "http://www.newsworks.org/images/stories/flexicontent/l_shutterstock_goldfish_1200x675.jpg",
   description: "A great entry fish."
-})
-Fish.create!({ 
-  name: "Tuna",
-  description: "Huge and tasty with mayo."
-})
+},
+{
+  name: "Phish",
+  image_url: "http://bizopy.com/wp-content/uploads/2013/08/phish.jpg",
+  description: "Known to occasionally grow dreadlocks and smell funny."
+}
+])
